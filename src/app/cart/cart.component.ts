@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
 
   emptyCart():void{
     this.cart.emptyCart();
-    this.emittEvent.emit("Gracias por su compra,no aceptamos devolucion,chauchis,mil besitos,chauuu, hasta pronto");
+    this.emittEvent.emit("Gracias por su compra!no aceptamos devolucion,chauchis,mil besitos,chauuu, hasta pronto");
   }
    
 
