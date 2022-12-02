@@ -1,0 +1,33 @@
+
+
+nav{
+    background-color: #00a4e4;
+
+}
+
+a{
+    color: white;
+}
+
+footer{
+    background-color: #004e74;
+}
+
+footer p{
+    color: white;
+}
+
+body{
+    margin :0px;
+}
+.carouselExampleIndicators{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#horizontal li:hover .vertical{
+    display: block;
+}
+

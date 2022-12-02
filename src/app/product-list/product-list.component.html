@@ -1,0 +1,24 @@
+<table class="table text-center ">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [ngClass]="{'clearance':product.clearence}">
+            <td><img width="90" class="img-thumbnail" [src]="product.image" [alt]="product.name"></td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency}}</td>
+            <td *ngIf='product.stock>0'>
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" (maxReached)="maxReached($event)"></app-input-integer>
+                <button class="btn" (click)="addToCart(product)">Añadir</button>
+            </td>
+            <td *ngIf='product.stock==0'> <span class="badge text">No hay Stock!</span></td>
+        </tr>
+
+    </tbody>
+</table>
